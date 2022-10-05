@@ -7,6 +7,7 @@ const Home = ({ products, bannderData }) => {
   return (
     <>
       {/* {test change} */}
+      {/* {test change} */}
       <HeroBanner />
       {console.log(`products ${products}`)}
       <div className="products-heading">
