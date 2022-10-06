@@ -3,13 +3,11 @@ import React from "react";
 import { client } from "../lib/client";
 import { Product, FooterBanner, HeroBanner } from "../components";
 
-const Home = ({ products, bannderData }) => {
+const Home = ({ products, bannerData }) => {
   return (
     <>
-      {/* {test change} */}
-      {/* {test change} */}
-      <HeroBanner />
-      {console.log(`products ${products}`)}
+      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
+      {console.log(bannerData)}
       <div className="products-heading">
         <h2>Best Selling Products</h2>
         <p>Fresh Local Produce</p>
@@ -28,12 +26,13 @@ const Home = ({ products, bannderData }) => {
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]'; // sanity query
   const products = await client.fetch(query);
+  // console.log(`products ${products}`);
 
   const bannerQuery = '*[_type == "banner"]';
-  const bannderData = await client.fetch(bannerQuery);
-
+  const bannerData = await client.fetch(bannerQuery);
+  // console.log(`bannerData ${bannerData}`);
   return {
-    props: { products, bannderData },
+    props: { products, bannerData },
   };
 };
 
