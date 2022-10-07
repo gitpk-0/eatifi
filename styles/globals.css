@@ -112,7 +112,7 @@ width: 100%;
 .product-card:hover{
   transform: scale(1.1,1.1)
 }
-.product-image{
+.product-image{ /***here***/
   border-radius: 15px;
   background-color: #ebebeb;
   transform: scale(1, 1);
@@ -168,7 +168,7 @@ width: 100%;
   margin-left: -20px;
   text-transform: uppercase;
 }
-.hero-banner-image{
+.hero-banner-image{ /***here***/
   position: absolute;
   top: 0%;
   right:20%;
@@ -248,7 +248,7 @@ text-align: end;
 .banner-desc .left p{
   margin:18px;
 }
-.footer-banner-image{
+.footer-banner-image{ /***here***/
   position: absolute;
   width: 375px;
   height: 300px;
@@ -351,7 +351,7 @@ padding: 20px 10px;
  gap: 30px;
   padding: 20px;
 }
-.product .cart-product-image{
+.product .cart-product-image{ /***here***/
   width:180px ;
   height: 150px;
     border-radius: 15px;
@@ -429,25 +429,26 @@ padding: 30px 65px;
 
 }
 
-.product-detail-image{
+.product-detail-image{ /***here***/
   border-radius: 15px;
    background-color: #ebebeb;
 
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   cursor: pointer;
   transition: .3s ease-in-out;
+  object-fit: cover;
 }
-.product-detail-image:hover{
+.product-detail-image:hover{ /***here***/
   background-color: #f02d34;
 
 }
-.small-images-container{
+.small-images-container{ /***here***/
   display: flex;
   gap: 10px;
   margin-top: 20px;
 }
-.small-image{
+.small-image{ /***here***/
   border-radius: 8px;
   background-color: #ebebeb;
   width: 70px;
@@ -455,7 +456,7 @@ padding: 30px 65px;
   cursor: pointer;
 }
 
-.selected-image{
+.selected-image{ /***here***/
   background-color:#f02d34;
 }
 .reviews{
@@ -628,7 +629,7 @@ margin-top: 160px;
   .hero-banner-container{
     height: 560px;
   }
-  .hero-banner-image{
+  .hero-banner-image{ /***here***/
     width: 375px;
     height: 300px;
     top: -2%;
@@ -639,7 +640,7 @@ margin-top: 160px;
     height: 560px;
     margin-top: 80px;
   }
-  .footer-banner-image{
+  .footer-banner-image{ /***here***/
     width: 77%;
     left: 30%;
     top: 6%;
@@ -685,9 +686,11 @@ margin-top: 160px;
   .product-detail-container{
     flex-wrap: wrap;
     }
-  .product-detail-container .product-detail-image{
-    width: 350px;
-    height: 350px;
+  .product-detail-container .product-detail-image{  /***here***/
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    
   }
   .cart-container{
     width: 415px;
@@ -703,7 +706,7 @@ margin-top: 160px;
     padding: 20px 5px;
 
   }
-  .product .cart-product-image{
+  .product .cart-product-image{ /***here***/
     width: 25%;
     height: 25%;
   }

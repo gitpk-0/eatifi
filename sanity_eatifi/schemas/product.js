@@ -32,7 +32,7 @@ export default {
       type: "number",
     },
     {
-      name: "detailts",
+      name: "detailts", // typo
       title: "Details",
       type: "string",
     },
