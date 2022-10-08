@@ -10,12 +10,9 @@ import {
 import { client, urlFor } from "../../lib/client";
 
 const ProductDetails = ({ product, products }) => {
+  // {console.log(product);}
   // destructure product values
-  {
-    console.log(product);
-  }
-
-  const { image, name, detailts, price } = product;
+  const { image, name, detailts, price, uom } = product;
   const details = detailts; // schema typo fix
 
   return (
@@ -49,6 +46,23 @@ const ProductDetails = ({ product, products }) => {
           </div>
           <h4>Details: </h4>
           <p>{details}</p>
+          <p className="price">
+            ${price} /{uom}
+          </p>
+          <div className="quantity">
+            <h3>Quantity: </h3>
+            <p className="quantity-desc">
+              <span className="minus" onClick="">
+                <AiOutlineMinus />
+              </span>
+              <span className="num" onClick="">
+                0
+              </span>
+              <span className="plus" onClick="">
+                <AiOutlinePlus />
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </div>

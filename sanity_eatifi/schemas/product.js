@@ -32,6 +32,11 @@ export default {
       type: "number",
     },
     {
+      name: "uom",
+      title: "UOM",
+      type: "string",
+    },
+    {
       name: "detailts", // typo
       title: "Details",
       type: "string",
