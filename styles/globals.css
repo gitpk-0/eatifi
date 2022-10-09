@@ -453,11 +453,12 @@ padding: 30px 65px;
   background-color: #ebebeb;
   width: 70px;
   height: 70px;
+  object-fit: cover;
   cursor: pointer;
 }
 
 .selected-image{ /***here***/
-  background-color:#f02d34;
+  opacity: 50%;
 }
 .reviews{
   color: #f02d34;

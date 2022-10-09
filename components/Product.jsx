@@ -18,7 +18,7 @@ const Product = ({ product: { image, name, slug, price, uom } }) => {
           />
           <p className="product-name">{name}</p>
           <p className="product-price">
-            ${price} /{uom}
+            ${price} {uom === "each" ? "each" : "/lb"}
           </p>
         </div>
       </Link>
